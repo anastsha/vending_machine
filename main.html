@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_machine.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="margin-left: 60px;">Vending Machine</h1>
+    <div class="vendmachine">
+        <!--Left part of vending maschine-->
+        <div class="leftpart">
+            <img src="images/cocacola.jpg" alt="CocaCola">
+            <!--Beverage dispanding-->
+            <div class="dispensing"></div>
+        </div>
+        <!--Right part of vending maschine-->
+        <div class="rightpart">
+            <!--Box with price of coca-cola-->
+            <p class="price_cola" style="position: absolute; top: 175px; left: 15px;">0.5l bottle 2€</p>
+            <!--Button for coca-cola choice-->
+            <button onclick="Colachoice()" class="colabtn">
+                <img src="images/Colalogo.jpg" alt="Colalogo">  
+            </button>
+            <!--Box with price of fanta-->
+            <p class="price_fanta" style="position: absolute; top: 225px; left: 15px;">0.5l bottle 2€</p>
+            <!--Button for fanta choice-->
+            <button onclick="Fantachoice()" class="fantabtn">
+                <img src="images/Fantalogo.jpg" alt="Fantalogo">
+            </button>
+            <!--Box with price of sprite-->
+            <p class="price_sprite" style="position: absolute; top: 275px; left: 15px;">0.5l bottle 2€</p>
+            <!--Button for sprite choice-->
+            <button onclick="Spritechoice()" class="spritebtn">
+                <img src="images/Spritelogo.png" alt="Spritelogo">
+            </button>
+            <!--Box with price of mineral water-->
+            <p class="price_aqua" style="position: absolute; top: 325px; left: 15px;">0.5l bottle 1.5€</p>
+            <!--Button for mineral water choice-->
+            <button onclick="Aquachoice()" class="aquabtn">
+                <img src="images/Aqualogo.png" alt="Aqualogo"> 
+            </button>
+            <!--Display of vending machine-->
+            <input type="text" class="display" id="display">
+            <!--Slot for coins-->
+            <div class="cashslot">
+                <div id="cashslot"></div>
+                <label id="moneyselect">Insert coins:</label>
+                    <select name="moneyselect" id="money" onchange="Insertmoney()">
+                        <option value=""></option>
+                        <option value="eur2">2 eur</option>
+                        <option value="eur1">1 eur</option>
+                        <option value="cent50">50 cents</option>
+                        <option value="cent20">20 cents</option>
+                        <option value="cent10">10 cents</option>
+                    </select> 
+            </div>
+            <!--Slot for money refund-->
+            <div class="moneyback"></div>
+
+        </div>
+    </div>
+    <script src="vend_machine.js"></script>
+</body>
+</html>
