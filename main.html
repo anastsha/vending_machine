@@ -14,7 +14,9 @@
         <div class="leftpart">
             <img src="images/cocacola.jpg" alt="CocaCola">
             <!--Beverage dispanding-->
-            <div class="dispensing"></div>
+            <div class="dispensing">
+                <input type="text" id="beverage">
+            </div>
         </div>
         <!--Right part of vending maschine-->
         <div class="rightpart">
@@ -47,6 +49,7 @@
             <!--Slot for coins-->
             <div class="cashslot">
                 <div id="cashslot"></div>
+                <!--Choose coins to insert-->
                 <label id="moneyselect">Insert coins:</label>
                     <select name="moneyselect" id="money" onchange="Insertmoney()">
                         <option value=""></option>
@@ -58,8 +61,38 @@
                     </select> 
             </div>
             <!--Slot for money refund-->
-            <div class="moneyback"></div>
-
+            <div class="moneyback">
+                <input type="text" id="moneyback">
+            </div>
+        <div class="statistics">
+            <h2>Statistics</h2>
+            <div class="bevstorage">
+                <h3>Beverage storage</h3>
+                <label for="cola">Coca-cola:</label>
+                <input type="text" value="5" id="colastrg">
+                <label for="fanta">Fanta:</label>
+                <input type="text" value="5" id="fantastrg">
+                <label for="sprite">Sprite:</label>
+                <input type="text" value="5" id="spritestrg">
+                <label for="aqua">Mineral water:</label>
+                <input type="text" value="5" id="aquastrg">
+            </div>
+            <br>
+            <br>
+            <div class="moneystorage">
+                <h3>Coins storage</h3>
+                <label for="eur2">2 eur:</label>
+                <input type="text" value="10" id="eur2">
+                <label for="eur1">1 eur:</label>
+                <input type="text" value="10" id="eur1">
+                <label for="c50">50 c:</label>
+                <input type="text" value="10" id="c50">
+                <label for="c20">20 c:</label>
+                <input type="text" value="10" id="c20">
+                <label for="c10">10 c:</label>
+                <input type="text" value="10" id="c10">
+            </div>
+        </div>
         </div>
     </div>
     <script src="vend_machine.js"></script>
